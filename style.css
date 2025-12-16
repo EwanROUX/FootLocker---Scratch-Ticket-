@@ -1,0 +1,177 @@
+:root {
+    --fl-red: #CE1126;
+    --fl-black: #000000;
+    --fl-white: #FFFFFF;
+    --fl-gray: #E0E0E0;
+    --fl-dark-gray: #333333;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial Black', 'Impact', sans-serif; /* Police grasse style sport */
+    background-color: var(--fl-dark-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* --- CARTE PRINCIPALE --- */
+.app-container {
+    background-color: var(--fl-white);
+    width: 100%;
+    max-width: 400px; /* Taille mobile/desktop compacte */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    text-align: center;
+}
+
+/* --- HEADER --- */
+.header {
+    background-color: var(--fl-black);
+    padding: 15px 0;
+    border-top: 5px solid var(--fl-gray); /* Petite déco style boite à chaussures */
+    position: relative;
+}
+
+.logo-text {
+    color: var(--fl-red);
+    font-size: 24px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+/* --- BODY --- */
+.card-body {
+    padding: 20px;
+    min-height: 300px; /* Hauteur fixe pour éviter que ça saute */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h2 {
+    margin-top: 0;
+    text-transform: uppercase;
+    font-size: 22px;
+}
+
+h3 {
+    margin: 0;
+    font-size: 20px;
+}
+
+/* --- ZONE DE GRATTAGE --- */
+.scratch-container {
+    position: relative;
+    width: 300px;
+    height: 150px;
+    margin: 0 auto 20px auto;
+    border: 2px solid var(--fl-black);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.hidden-message {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    font-size: 24px;
+    color: var(--fl-black);
+    z-index: 1; /* Derrière le canvas */
+}
+
+canvas {
+    position: relative;
+    z-index: 2; /* Devant le message */
+    cursor: crosshair;
+}
+
+/* --- ZONES DE RESULTATS --- */
+.reward-box {
+    background-color: var(--fl-gray);
+    width: 300px;
+    height: 150px;
+    margin: 0 auto 20px auto;
+    border-radius: 10px;
+    border: 2px solid var(--fl-black);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.discount-badge {
+    background: var(--fl-red);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin-top: 10px;
+    font-size: 18px;
+    transform: rotate(-5deg);
+}
+
+.gray-box {
+    background-color: #ccc;
+    color: #666;
+}
+
+/* --- FORMULAIRE --- */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif; /* Police normale pour inputs */
+}
+
+/* --- BOUTONS --- */
+.btn-red {
+    background-color: var(--fl-red);
+    color: var(--fl-white);
+    border: none;
+    padding: 15px 40px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-red:hover {
+    background-color: #a80015;
+}
+
+.btn-red:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* --- UTILITAIRES --- */
+.hidden {
+    display: none !important;
+}
+
+.active {
+    display: block;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

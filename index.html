@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FootLocker - Scratch & Win</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <div class="header">
+            <div class="logo-strip"></div>
+            <div class="logo-text">FOOT LOCKER</div>
+        </div>
+
+        <div class="card-body">
+            
+            <div id="screen-game" class="screen active">
+                <h2>SCRATCH AND WIN</h2>
+                
+                <div class="scratch-container">
+                    <div id="result-text" class="hidden-message">???</div>
+                    <canvas id="scratch-canvas" width="300" height="150"></canvas>
+                </div>
+
+                <button id="btn-check-result" class="btn-red" disabled>VOIR LE RÉSULTAT</button>
+            </div>
+
+            <div id="screen-win" class="screen hidden">
+                <h2>CONGRATS</h2>
+                <div class="reward-box">
+                    <h3>IMMEDIATE<br>DISCOUNT</h3>
+                    <div class="discount-badge">-20%</div>
+                </div>
+                <button id="btn-claim" class="btn-red">CLAIM</button>
+            </div>
+
+            <div id="screen-lose" class="screen hidden">
+                <h2>NO LUCK..</h2>
+                <div class="reward-box gray-box">
+                    <h3>NO<br>REWARDS</h3>
+                </div>
+                <button id="btn-retry" class="btn-red">PLAY AGAIN</button>
+            </div>
+
+            <div id="screen-form" class="screen hidden">
+                <h2>CONGRATS</h2>
+                <form id="win-form">
+                    <input type="text" placeholder="First name :" required>
+                    <input type="text" placeholder="Name :" required>
+                    <input type="email" placeholder="Mail :" required>
+                    <input type="tel" placeholder="Tel :" required>
+                    <button type="submit" class="btn-red">CLAIM REWARD</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
