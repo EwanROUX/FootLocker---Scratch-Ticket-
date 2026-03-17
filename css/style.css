@@ -1,0 +1,225 @@
+/* Police = Inter */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap");
+
+:root {
+  --fl-red: #ce1126;
+  --fl-black: #000000;
+  --fl-white: #ffffff;
+  --fl-gray-input: #f2f2f2;
+  --fl-gray-frame: #d9d9d9; /* Gris du bloc formulaire */
+}
+
+/* page en ful width */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--fl-white);
+  width: 100%;
+  min-height: 100vh;
+}
+
+.app-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Barre de slide à droite */
+.app-container::after {
+  content: "";
+  position: absolute;
+  top: 150px;
+  right: 20px;
+  width: 15px;
+  height: 90%;
+  background: var(--fl-black);
+  border-radius: 10px;
+}
+
+/* Design et formes des "bloc" */
+.header {
+  background-color: var(--fl-black);
+  padding: 30px;
+  text-align: center;
+  width: 100%;
+}
+
+.logo-img {
+  height: 50px;
+}
+
+.card-body {
+  flex: 1;
+  padding: 4rem 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h2 {
+  font-weight: 900;
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  margin-bottom: 2rem;
+  color: var(--fl-black);
+  text-transform: uppercase;
+}
+
+/* Bloc Formulaire ( 80% de large ) */
+.form-frame {
+  background-color: var(--fl-gray-frame);
+  border: 3px solid var(--fl-black);
+  border-radius: 30px;
+  padding: 50px;
+  width: 80%;
+  max-width: 1100px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+input {
+  width: 100%;
+  padding: 22px;
+  background-color: var(--fl-gray-input);
+  border: none;
+  border-radius: 15px;
+  font-size: 1.2rem;
+  font-family: "Inter", sans-serif;
+}
+
+/* Bouton ( Claim / Play ) */
+.btn-claim {
+  background-color: var(--fl-red);
+  color: white;
+  padding: 20px 100px;
+  font-size: 2.5rem;
+  font-weight: 900;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.1s;
+}
+
+.btn-claim:active {
+  transform: scale(0.95);
+}
+
+/* Bloc Récompense */
+.reward-frame {
+  background-color: var(--fl-gray-frame);
+  border: 3px solid var(--fl-black);
+  border-radius: 30px;
+  padding: 50px;
+  width: 80%;
+  max-width: 1100px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px; /* Aligné sur la hauteur des autres cadres */
+}
+
+.reward-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin-bottom: 60px; 
+  color: var(--fl-black);
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.reward-badge {
+  background: var(--fl-red);
+  color: white;
+  padding: 20px 50px;
+  font-size: clamp(4rem, 10vw, 6rem);
+  font-weight: 900;
+  transform: rotate(-3deg);
+  border-radius: 5px;
+}
+
+/* Page d'Accueil */
+.btn-start {
+  background-color: var(--fl-red);
+  color: white;
+  padding: 25px 80px;
+  font-size: 2.5rem;
+  font-weight: 900;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.1s;
+}
+
+.btn-start:active {
+  transform: scale(0.95);
+}
+
+/* Le "Scratch" */
+.scratch-frame {
+  background-color: #c0c0c0;
+  background-image: repeating-linear-gradient(
+    45deg,
+    #b3b3b3,
+    #b3b3b3 10px,
+    #c0c0c0 10px,
+    #c0c0c0 20px
+  );
+  border: 3px solid var(--fl-black);
+  border-radius: 30px;
+  width: 80%;
+  max-width: 1100px;
+  min-height: 400px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scratch-text {
+  font-size: 2.5rem; 
+  font-weight: 900;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.btn-play {
+  background-color: #ccc;
+  color: #888;
+  padding: 20px 100px;
+  font-size: 2.5rem;
+  font-weight: 900;
+  border: none;
+  border-radius: 100px;
+  cursor: default;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+}
